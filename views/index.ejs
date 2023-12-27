@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+<body>
+
+<div class="bg-image" style="background-image: url('/images/NQHESK.jpg'); background-position: center; background-size: cover; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4 bg-secondary">
+            <img src="https://wallpapercave.com/wp/wp3423613.jpg" class="img-fluid"
+                 alt="Sample image">
+            <br><br><br>
+            <form action="/register" method="post">
+                <div class="text-primary"><h4>Create account</h4></div>
+                <div class="mt-4">
+                    <h5><span>Already have an account?</span>
+                        <a href="/login" class="text-decoration-none">Signin</a></h5>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label text-white" for="first_name">First Name:</label>
+                    <input type="text" id="first_name" class="form-control form-control-lg" name="first_name" placeholder="First Name">
+                    <div class="text-danger mt-2" id="errorFirstName"></div>
+                </div>
+                <div class=" mb-4">
+                    <label class="form-label text-white" for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" class="form-control form-control-lg" name="last_name" placeholder="Last Name">
+                    <div class="text-danger mt-2" id="errorLastName"></div>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label text-white" for="last_name">Email Address:</label>
+                    <input type="email" id="email" class="form-control form-control-lg" name="email" placeholder="Email Address" required>
+                    <div class="text-danger mt-2" id="errorMail" ><%= errorEmail %></div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" id="btRegister" >Register</button>
+                    <br><br><br>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+<script src="/javascripts/register.js"></script>
+
+</body>
+</html>
